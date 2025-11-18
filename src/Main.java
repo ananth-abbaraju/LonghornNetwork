@@ -2,7 +2,17 @@ import java.util.*;
 import java.util.concurrent.*;
 
 // Main.java - Self-contained testing & grading with multiple built‑in test cases.
+/**
+ * The main driver class for the Longhorn Network application.
+ * Contains self-contained testing and grading logic with multiple built-in test cases.
+ */
 public class Main {
+    /**
+     * The entry point of the application.
+     * Runs a series of generated test cases and calculates a score.
+     *
+     * @param args Command line arguments (not used).
+     */
     public static void main(String[] args) {
         // Create a list of test cases.
         List<List<UniversityStudent>> testCases = new ArrayList<>();
