@@ -20,6 +20,11 @@ public class StudentGraph {
             this.neighbor = neighbor;
             this.weight = weight;
         }
+
+        @Override
+        public String toString() {
+            return "(" + neighbor.getName() + ", " + weight + ")";
+        }
     }
 
     /**
@@ -41,7 +46,7 @@ public class StudentGraph {
             for (int j = i + 1; j < students.size(); j++) {
                 UniversityStudent s1 = students.get(i);
                 UniversityStudent s2 = students.get(j);
-                
+
                 int strength = s1.calculateConnectionStrength(s2);
                 if (strength > 0) {
                     addEdge(s1, s2, strength);

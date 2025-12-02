@@ -1,3 +1,6 @@
+(base) ananthabbaraju@MacBook-Pro-3 src % javac *.java
+(base) ananthabbaraju@MacBook-Pro-3 src % java Main
+
 ========================================
 === Running Test Case 1 ===
 ========================================
