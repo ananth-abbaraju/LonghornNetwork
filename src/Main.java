@@ -7,12 +7,6 @@ import java.util.concurrent.*;
  * Contains self-contained testing and grading logic with multiple built-in test cases.
  */
 public class Main {
-    /**
-     * The entry point of the application.
-     * Runs a series of generated test cases and calculates a score.
-     *
-     * @param args Command line arguments (not used).
-     */
     public static void main(String[] args) {
         // Create a list of test cases.
         List<List<UniversityStudent>> testCases = new ArrayList<>();
@@ -230,3 +224,12 @@ public class Main {
     }
 }
 
+
+
+
+
+
+
+
+
+  

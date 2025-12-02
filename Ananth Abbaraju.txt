@@ -1,0 +1,95 @@
+========================================
+=== Running Test Case 1 ===
+========================================
+
+--- Built-in Test Data for Test Case 1 ---
+UniversityStudent{name='Alice', age=20, gender='Female', year=2, major='Computer Science', GPA=3.5, roommatePreferences=[Bob, Charlie, Frank], previousInternships=[Google]}
+UniversityStudent{name='Bob', age=21, gender='Male', year=3, major='Computer Science', GPA=3.7, roommatePreferences=[Alice, Charlie, Frank], previousInternships=[Google, Microsoft]}
+UniversityStudent{name='Charlie', age=20, gender='Male', year=2, major='Mathematics', GPA=3.2, roommatePreferences=[Alice, Bob, Frank], previousInternships=[None]}
+UniversityStudent{name='Frank', age=23, gender='Male', year=3, major='Chemistry', GPA=3.1, roommatePreferences=[Alice, Bob, Charlie], previousInternships=[]}
+UniversityStudent{name='Dana', age=22, gender='Female', year=4, major='Biology', GPA=3.8, roommatePreferences=[Evan], previousInternships=[Pfizer]}
+UniversityStudent{name='Evan', age=22, gender='Male', year=4, major='Biology', GPA=3.6, roommatePreferences=[Dana], previousInternships=[Moderna, Pfizer]}
+
+--- Automated Tests for Test Case 1 ---
+Student Graph:
+Charlie -> [(Alice, 1)]
+Bob -> [(Alice, 5)]
+Alice -> [(Bob, 5), (Charlie, 1)]
+Evan -> [(Dana, 6)]
+Frank -> []
+Dana -> [(Evan, 6)]
+Test: StudentGraph passed (+30 pts).
+Test: GaleShapley passed (+20 pts).
+Alice sent a friend request to Bob
+Bob sent a friend request to Alice
+Alice to Bob: Hello there!
+Bob to Alice: Hi back!
+Test: FriendRequestThread/ChatThread passed (+20 pts).
+ReferralPathFinder returned path: []
+Test: ReferralPathFinder passed (+10 pts).
+Test: Integration passed (+20 pts).
+
+Total Score for Test Case 1: 100
+
+Test Case 1 Final Score: 100
+
+========================================
+=== Running Test Case 2 ===
+========================================
+
+--- Built-in Test Data for Test Case 2 ---
+UniversityStudent{name='Greg', age=24, gender='Male', year=4, major='Economics', GPA=3.4, roommatePreferences=[Helen, Ivy], previousInternships=[InternshipA]}
+UniversityStudent{name='Helen', age=24, gender='Female', year=4, major='Economics', GPA=3.5, roommatePreferences=[Greg, Ivy], previousInternships=[InternshipB]}
+UniversityStudent{name='Ivy', age=25, gender='Female', year=4, major='Economics', GPA=3.8, roommatePreferences=[Helen, Greg], previousInternships=[DummyCompany]}
+
+--- Automated Tests for Test Case 2 ---
+Student Graph:
+Helen -> [(Greg, 3), (Ivy, 2)]
+Ivy -> [(Greg, 2), (Helen, 2)]
+Greg -> [(Helen, 3), (Ivy, 2)]
+Test: StudentGraph passed (+30 pts).
+Test: GaleShapley passed (+20 pts).
+Greg sent a friend request to Helen
+Greg to Helen: Hello there!
+Helen sent a friend request to Greg
+Helen to Greg: Hi back!
+Test: FriendRequestThread/ChatThread passed (+20 pts).
+ReferralPathFinder returned path: [UniversityStudent{name='Greg', age=24, gender='Male', year=4, major='Economics', GPA=3.4, roommatePreferences=[Helen, Ivy], previousInternships=[InternshipA]}, UniversityStudent{name='Ivy', age=25, gender='Female', year=4, major='Economics', GPA=3.8, roommatePreferences=[Helen, Greg], previousInternships=[DummyCompany]}]
+Test: ReferralPathFinder passed (+10 pts).
+Test: Integration passed (+20 pts).
+
+Total Score for Test Case 2: 100
+
+Test Case 2 Final Score: 100
+
+========================================
+=== Running Test Case 3 ===
+========================================
+
+--- Built-in Test Data for Test Case 3 ---
+UniversityStudent{name='Jack', age=19, gender='Male', year=1, major='History', GPA=3.0, roommatePreferences=[Kim], previousInternships=[MuseumIntern]}
+UniversityStudent{name='Kim', age=19, gender='Female', year=1, major='History', GPA=3.2, roommatePreferences=[Jack], previousInternships=[MuseumIntern]}
+UniversityStudent{name='Leo', age=20, gender='Male', year=1, major='History', GPA=3.5, roommatePreferences=[], previousInternships=[None]}
+
+--- Automated Tests for Test Case 3 ---
+Student Graph:
+Leo -> [(Jack, 2), (Kim, 2)]
+Jack -> [(Kim, 6), (Leo, 2)]
+Kim -> [(Jack, 6), (Leo, 2)]
+Test: StudentGraph passed (+30 pts).
+Test: GaleShapley passed (+20 pts).
+Jack sent a friend request to Kim
+Jack to Kim: Hello there!
+Kim sent a friend request to Jack
+Kim to Jack: Hi back!
+Test: FriendRequestThread/ChatThread passed (+20 pts).
+ReferralPathFinder returned path: []
+Test: ReferralPathFinder passed (+10 pts).
+Test: Integration passed (+20 pts).
+
+Total Score for Test Case 3: 100
+
+Test Case 3 Final Score: 100
+
+========================================
+Average Score across all test cases: 100
